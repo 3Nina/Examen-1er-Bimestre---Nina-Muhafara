@@ -15,6 +15,11 @@ public class FlotaDeTaxis : MonoBehaviour
     int kmPorDia = 90;
     int kmTotalPorDia;
 
+    float descuentoCienLitros = 20f;
+    float plataDescontada;
+    int litrosParaDescuento = 100;
+    float costoTotalConDescueto;
+
 
     void Start()
     {
@@ -36,8 +41,19 @@ public class FlotaDeTaxis : MonoBehaviour
 
         costoTotal = cantTotalLitros * costoPorLitro;
 
-            //4. Mostrar el resultado
-            Debug.Log("Una flota de " + cantidadDeTaxis + " unidades trabajando durante " + cantidadDeDias + " implicará un gasto de " + costoTotal + " pesos en concepto de combustible");
+        if (cantTotalLitros < litrosParaDescuento)
+        {
+            Debug.Log("No alcanza para el descuento");
+            
+        } else
+        {
+            plataDescontada = costoTotal * descuentoCienLitros / 100;
+            costoTotalConDescueto = costoTotal - plataDescontada;
+            Debug.Log("La cantidad descontada son: " + plataDescontada + "y el costo total es: " + costoTotalConDescueto);
+        }
+
+        //4. Mostrar el resultado
+        Debug.Log("Una flota de " + cantidadDeTaxis + " unidades trabajando durante " + cantidadDeDias + " implicará un gasto de " + costoTotal + " pesos en concepto de combustible");
 
 
     }

@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11272206082a89040bbfd9008545abd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadDeDias: 0
-  cantidadDeTaxis: 0
+  cantidadDeDias: 1000
+  cantidadDeTaxis: 20
 --- !u!4 &1920321805
 Transform:
   m_ObjectHideFlags: 0
